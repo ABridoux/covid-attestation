@@ -27,19 +27,10 @@
 		BD8EBC2B254F3489000D8625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8EBC2A254F3489000D8625 /* Assets.xcassets */; };
 		BD8EBC2E254F3489000D8625 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8EBC2D254F3489000D8625 /* Preview Assets.xcassets */; };
 		BD8EBC31254F3489000D8625 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD8EBC2F254F3489000D8625 /* LaunchScreen.storyboard */; };
-		BD8EBC3C254F3489000D8625 /* AttestationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EBC3B254F3489000D8625 /* AttestationTests.swift */; };
-		BD8EBC47254F3489000D8625 /* AttestationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EBC46254F3489000D8625 /* AttestationUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		BD8EBC38254F3489000D8625 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD8EBC16254F3488000D8625 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BD8EBC1D254F3488000D8625;
-			remoteInfo = Attestation;
-		};
-		BD8EBC43254F3489000D8625 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD8EBC16254F3488000D8625 /* Project object */;
 			proxyType = 1;
@@ -70,11 +61,7 @@
 		BD8EBC30254F3489000D8625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD8EBC32254F3489000D8625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD8EBC37254F3489000D8625 /* AttestationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttestationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD8EBC3B254F3489000D8625 /* AttestationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttestationTests.swift; sourceTree = "<group>"; };
 		BD8EBC3D254F3489000D8625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD8EBC42254F3489000D8625 /* AttestationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttestationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD8EBC46254F3489000D8625 /* AttestationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttestationUITests.swift; sourceTree = "<group>"; };
-		BD8EBC48254F3489000D8625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +75,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BD8EBC34254F3489000D8625 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD8EBC3F254F3489000D8625 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -174,7 +154,6 @@
 			children = (
 				BD8EBC20254F3488000D8625 /* Attestation */,
 				BD8EBC3A254F3489000D8625 /* AttestationTests */,
-				BD8EBC45254F3489000D8625 /* AttestationUITests */,
 				BD8EBC1F254F3488000D8625 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -184,7 +163,6 @@
 			children = (
 				BD8EBC1E254F3488000D8625 /* Attestation.app */,
 				BD8EBC37254F3489000D8625 /* AttestationTests.xctest */,
-				BD8EBC42254F3489000D8625 /* AttestationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,19 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				BD3A5D2325507823000F5106 /* ProfileTests.swift */,
-				BD8EBC3B254F3489000D8625 /* AttestationTests.swift */,
 				BD8EBC3D254F3489000D8625 /* Info.plist */,
 			);
 			path = AttestationTests;
-			sourceTree = "<group>";
-		};
-		BD8EBC45254F3489000D8625 /* AttestationUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BD8EBC46254F3489000D8625 /* AttestationUITests.swift */,
-				BD8EBC48254F3489000D8625 /* Info.plist */,
-			);
-			path = AttestationUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,24 +242,6 @@
 			productReference = BD8EBC37254F3489000D8625 /* AttestationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BD8EBC41254F3489000D8625 /* AttestationUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BD8EBC51254F3489000D8625 /* Build configuration list for PBXNativeTarget "AttestationUITests" */;
-			buildPhases = (
-				BD8EBC3E254F3489000D8625 /* Sources */,
-				BD8EBC3F254F3489000D8625 /* Frameworks */,
-				BD8EBC40254F3489000D8625 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BD8EBC44254F3489000D8625 /* PBXTargetDependency */,
-			);
-			name = AttestationUITests;
-			productName = AttestationUITests;
-			productReference = BD8EBC42254F3489000D8625 /* AttestationUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -305,10 +255,6 @@
 						CreatedOnToolsVersion = 12.0;
 					};
 					BD8EBC36254F3489000D8625 = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = BD8EBC1D254F3488000D8625;
-					};
-					BD8EBC41254F3489000D8625 = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = BD8EBC1D254F3488000D8625;
 					};
@@ -333,7 +279,6 @@
 			targets = (
 				BD8EBC1D254F3488000D8625 /* Attestation */,
 				BD8EBC36254F3489000D8625 /* AttestationTests */,
-				BD8EBC41254F3489000D8625 /* AttestationUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -350,13 +295,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BD8EBC35254F3489000D8625 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD8EBC40254F3489000D8625 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,16 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD8EBC3C254F3489000D8625 /* AttestationTests.swift in Sources */,
 				BD3A5D2425507823000F5106 /* ProfileTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD8EBC3E254F3489000D8625 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD8EBC47254F3489000D8625 /* AttestationUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,11 +340,6 @@
 			isa = PBXTargetDependency;
 			target = BD8EBC1D254F3488000D8625 /* Attestation */;
 			targetProxy = BD8EBC38254F3489000D8625 /* PBXContainerItemProxy */;
-		};
-		BD8EBC44254F3489000D8625 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BD8EBC1D254F3488000D8625 /* Attestation */;
-			targetProxy = BD8EBC43254F3489000D8625 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -633,46 +557,6 @@
 			};
 			name = Release;
 		};
-		BD8EBC52254F3489000D8625 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HM6V67N856;
-				INFOPLIST_FILE = AttestationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abridoux.AttestationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Attestation;
-			};
-			name = Debug;
-		};
-		BD8EBC53254F3489000D8625 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HM6V67N856;
-				INFOPLIST_FILE = AttestationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abridoux.AttestationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Attestation;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -699,15 +583,6 @@
 			buildConfigurations = (
 				BD8EBC4F254F3489000D8625 /* Debug */,
 				BD8EBC50254F3489000D8625 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BD8EBC51254F3489000D8625 /* Build configuration list for PBXNativeTarget "AttestationUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BD8EBC52254F3489000D8625 /* Debug */,
-				BD8EBC53254F3489000D8625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

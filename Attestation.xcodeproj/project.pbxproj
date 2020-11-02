@@ -13,8 +13,6 @@
 		BD3A5D0A255077AB000F5106 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A5D09255077AB000F5106 /* Date+Extensions.swift */; };
 		BD3A5D0F255077BF000F5106 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A5D0E255077BF000F5106 /* Optional+Extensions.swift */; };
 		BD3A5D1A2550780A000F5106 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A5D142550780A000F5106 /* ValidationError.swift */; };
-		BD3A5D1B2550780A000F5106 /* CertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A5D152550780A000F5106 /* CertificateViewController.swift */; };
-		BD3A5D1C2550780A000F5106 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A5D162550780A000F5106 /* ProfileViewController.swift */; };
 		BD3A5D1D2550780A000F5106 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A5D172550780A000F5106 /* Profile.swift */; };
 		BD3A5D1E2550780A000F5106 /* ProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A5D182550780A000F5106 /* ProfileFormView.swift */; };
 		BD3A5D1F2550780A000F5106 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A5D192550780A000F5106 /* AbstractViewController.swift */; };
@@ -27,6 +25,9 @@
 		BD8EBC2B254F3489000D8625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8EBC2A254F3489000D8625 /* Assets.xcassets */; };
 		BD8EBC2E254F3489000D8625 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8EBC2D254F3489000D8625 /* Preview Assets.xcassets */; };
 		BD8EBC31254F3489000D8625 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD8EBC2F254F3489000D8625 /* LaunchScreen.storyboard */; };
+		BD93E063255092D500E29DE5 /* ProfilePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93E062255092D500E29DE5 /* ProfilePicker.swift */; };
+		BD93E067255093E200E29DE5 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93E066255093E200E29DE5 /* Color+Extensions.swift */; };
+		BD93E06F2550969700E29DE5 /* AttestationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93E06E2550969700E29DE5 /* AttestationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,6 @@
 		BD3A5D09255077AB000F5106 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		BD3A5D0E255077BF000F5106 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
 		BD3A5D142550780A000F5106 /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
-		BD3A5D152550780A000F5106 /* CertificateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificateViewController.swift; sourceTree = "<group>"; };
-		BD3A5D162550780A000F5106 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BD3A5D172550780A000F5106 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		BD3A5D182550780A000F5106 /* ProfileFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileFormView.swift; sourceTree = "<group>"; };
 		BD3A5D192550780A000F5106 /* AbstractViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +61,9 @@
 		BD8EBC32254F3489000D8625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD8EBC37254F3489000D8625 /* AttestationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttestationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8EBC3D254F3489000D8625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD93E062255092D500E29DE5 /* ProfilePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicker.swift; sourceTree = "<group>"; };
+		BD93E066255093E200E29DE5 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		BD93E06E2550969700E29DE5 /* AttestationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttestationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				BD3A5D192550780A000F5106 /* AbstractViewController.swift */,
-				BD3A5D152550780A000F5106 /* CertificateViewController.swift */,
 				BD3A5D182550780A000F5106 /* ProfileFormView.swift */,
-				BD3A5D162550780A000F5106 /* ProfileViewController.swift */,
-				BD3A5D142550780A000F5106 /* ValidationError.swift */,
+				BD93E062255092D500E29DE5 /* ProfilePicker.swift */,
+				BD93E06E2550969700E29DE5 /* AttestationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				BD3A5D09255077AB000F5106 /* Date+Extensions.swift */,
+				BD93E066255093E200E29DE5 /* Color+Extensions.swift */,
 				BD3A5D0E255077BF000F5106 /* Optional+Extensions.swift */,
 			);
 			path = Extensions;
@@ -144,6 +146,7 @@
 		BD3A5D4B25508D5A000F5106 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD3A5D142550780A000F5106 /* ValidationError.swift */,
 				BD3A5D172550780A000F5106 /* Profile.swift */,
 			);
 			path = Model;
@@ -315,13 +318,14 @@
 				BD3A5D1D2550780A000F5106 /* Profile.swift in Sources */,
 				BD3A5D1E2550780A000F5106 /* ProfileFormView.swift in Sources */,
 				BD8EBC29254F3488000D8625 /* Attestation.xcdatamodeld in Sources */,
+				BD93E06F2550969700E29DE5 /* AttestationView.swift in Sources */,
 				BD3A5D0025507789000F5106 /* MainCoordinator.swift in Sources */,
 				BD8EBC22254F3488000D8625 /* AppDelegate.swift in Sources */,
-				BD3A5D1C2550780A000F5106 /* ProfileViewController.swift in Sources */,
+				BD93E063255092D500E29DE5 /* ProfilePicker.swift in Sources */,
+				BD93E067255093E200E29DE5 /* Color+Extensions.swift in Sources */,
 				BD3A5CFB25507777000F5106 /* Coordinator.swift in Sources */,
 				BD8EBC24254F3488000D8625 /* SceneDelegate.swift in Sources */,
 				BD3A5D0F255077BF000F5106 /* Optional+Extensions.swift in Sources */,
-				BD3A5D1B2550780A000F5106 /* CertificateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

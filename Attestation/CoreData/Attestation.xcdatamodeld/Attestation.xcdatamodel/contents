@@ -10,6 +10,6 @@
         <attribute name="zipCode" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="ProfileEntity" positionX="-63" positionY="-18" width="128" height="28"/>
+        <element name="ProfileEntity" positionX="-63" positionY="-18" width="128" height="148"/>
     </elements>
 </model>

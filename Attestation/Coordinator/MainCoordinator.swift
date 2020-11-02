@@ -16,10 +16,7 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let certificateController = CertificateViewController()
-        let profileController = ProfileViewController()
-        let profileNavController = UINavigationController(rootViewController: profileController)
-        navigationController.pushViewController(certificateController, animated: false)
-        navigationController.present(profileNavController, animated: true)
+//        let certificateController = CertificateViewController()
+//        navigationController.pushViewController(certificateController, animated: false)
     }
 }

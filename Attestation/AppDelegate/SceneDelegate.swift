@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Combine
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    let coordinator = MainCoordinator(navigationController: .init())
+    let currentDate = CurrentDate()
     @Context var context
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -22,10 +23,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = coordinator.navigationController
+            let view = AttestationView()
+                .environment(\.managedObjectContext, context)
+                .environmentObject(currentDate)
+                .environmentObject(Profile.fetch(in: context))
+                .environmentObject(Attestation.fetch(in: context))
+
+            window.rootViewController = UIHostingController(rootView: view)
             self.window = window
             window.makeKeyAndVisible()
-            coordinator.start()
         }
     }
 
@@ -39,6 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        currentDate.current = .now
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

@@ -13,11 +13,11 @@ struct AttestationView: View {
     @EnvironmentObject var attestation: Attestation
     @EnvironmentObject var currentDate: CurrentDate
     @AppStorage("exitReason") private var exitReason: String?
-    
+
     var body: some View {
         NavigationView {
             Form {
-                Section() {
+                Section {
                     ProfileRow()
                     DatePicker("Sortie", selection: $currentDate.current)
                     NavigationLink(
@@ -26,7 +26,7 @@ struct AttestationView: View {
                             ExitReasonRow(selectedReason: $exitReason)
                         })
                 }
-                
+
                 if attestation.wasGenerated, attestation.exitReason != nil {
                     Section( header: Text("Dernière attestation")) {
                         AttestationRow()

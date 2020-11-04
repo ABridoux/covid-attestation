@@ -43,13 +43,6 @@ final class Profile: ObservableObject {
         return firstName + " " + lastName
     }
 
-    var qrText: String {
-        """
-        firstName: \(firstName)
-        lastName: \(lastName)
-        """
-    }
-
     // MARK: - Initialisation
 
     init() {}
@@ -60,7 +53,7 @@ final class Profile: ObservableObject {
         self.lastName = lastName
     }
 
-    private init(entity: ProfileEntity) {
+    private init(entity: Entity) {
         self.entity = entity
         firstName = entity.firstName ?? ""
         lastName = entity.lastName ?? ""
@@ -72,9 +65,9 @@ final class Profile: ObservableObject {
     }
 
     static func fetch(in context: NSManagedObjectContext) -> Profile {
-        let request: NSFetchRequest<ProfileEntity> = ProfileEntity.fetchRequest()
+        let request: NSFetchRequest<Entity> = Entity.fetchRequest()
 
-        var foundEntity: ProfileEntity?
+        var foundEntity: Entity?
         do {
             let results = try context.fetch(request)
             foundEntity = results.first

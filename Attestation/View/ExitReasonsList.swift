@@ -13,8 +13,7 @@ struct ExitReasonsList: View {
     @State private var showAlert = false
     @Environment(\.presentationMode) var presentationMode
     @Binding var selectedReason: String?
-    static let exitReasons = [ExitReason].load()
-    
+
     var body: some View {
         List(Self.exitReasons, id: \.self) { reason in
             Button(action: {
@@ -49,6 +48,10 @@ struct ExitReasonsList: View {
             })
         }
     }
+}
+
+extension ExitReasonsList {
+    static let exitReasons = [ExitReason].load()
 }
 
 struct ExitReasonsList_Previews: PreviewProvider {

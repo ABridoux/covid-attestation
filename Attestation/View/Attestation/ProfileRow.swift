@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfilePicker: View {
+struct ProfileRow: View {
 
     @State private var presentProfileEdit = false
     @EnvironmentObject var profile: Profile
@@ -35,10 +35,10 @@ struct ProfilePicker: View {
 struct ProfilePicker_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ProfilePicker()
+            ProfileRow()
                 .environmentObject(Profile(firstName: "Lulu", lastName: "Trintignan"))
                 .padding(20)
-            ProfilePicker()
+            ProfileRow()
                 .environmentObject(Profile(firstName: "Lulu", lastName: "Trintignan"))
                 .padding(20)
                 .preferredColorScheme(.dark)

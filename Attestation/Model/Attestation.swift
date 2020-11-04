@@ -10,13 +10,16 @@ import CoreData
 
 final class Attestation: ObservableObject {
 
+    // MARK: - Constants
+
     typealias Entity = AttestationEntity
+
+    // MARK: - Properties
 
     var entity: AttestationEntity?
 
     @Published var date = Date()
     @Published var exitReason: String?
-
     @Published var wasGenerated = false
 
     var qrDateString: String {
@@ -26,6 +29,8 @@ final class Attestation: ObservableObject {
     var label: String {
         DateFormatter.label.string(from: date) + " à " + DateFormatter.qrHour.string(from: date)
     }
+
+    // MARK: - Initialisation
 
     private init(entity: AttestationEntity, wasGenerated: Bool = true) {
         self.entity = entity
@@ -60,6 +65,8 @@ final class Attestation: ObservableObject {
         }
     }
 
+    // MARK: - Functions
+    
     func save() throws {
 
         entity?.exitDate = date

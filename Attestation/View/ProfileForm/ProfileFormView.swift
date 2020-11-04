@@ -7,44 +7,6 @@
 
 import SwiftUI
 
-struct NameSection: View {
-
-    @EnvironmentObject var profile: Profile
-
-    var body: some View {
-        Section(header: Text("Nom")) {
-            TextField("Prénom", text: $profile.firstName)
-            TextField("Nom", text: $profile.lastName)
-        }
-    }
-}
-
-struct BirthSection: View {
-
-    @EnvironmentObject var profile: Profile
-
-    var body: some View {
-        Section(header: Text("Naissance")) {
-            DatePicker("Date", selection: $profile.birthDate, displayedComponents: .date)
-            TextField("Lieu", text: $profile.birthCity)
-        }
-    }
-}
-
-struct AddressSection: View {
-
-    @EnvironmentObject var profile: Profile
-
-    var body: some View {
-        Section(header: Text("Adresse")) {
-            TextField("Rue", text: $profile.street)
-            TextField("Ville", text: $profile.city)
-            TextField("Code postal", text: $profile.zipCode)
-                .keyboardType(.numberPad)
-        }
-    }
-}
-
 struct ProfileFormView: View {
 
     @State private var alertMessage = ""

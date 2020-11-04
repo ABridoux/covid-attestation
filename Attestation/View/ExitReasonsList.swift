@@ -13,10 +13,10 @@ struct ExitReasonsList: View {
     @State private var showAlert = false
     @Environment(\.presentationMode) var presentationMode
     @Binding var selectedReason: String?
-    let exitReasons = [ExitReason].load()
+    static let exitReasons = [ExitReason].load()
     
     var body: some View {
-        List(exitReasons, id: \.self) { reason in
+        List(Self.exitReasons, id: \.self) { reason in
             Button(action: {
                 selectedReason = reason.code
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {

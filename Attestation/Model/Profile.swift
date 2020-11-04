@@ -131,3 +131,19 @@ final class Profile: ObservableObject {
         }
     }
 }
+
+extension Profile {
+
+    static var stub1: Profile = {
+        let profile = Profile()
+        profile.firstName = "Bruce"
+        profile.lastName = "Banner"
+        profile.birthCity = "Greendom"
+        profile.birthDate = .now
+        profile.city = "New York"
+        profile.street = "52 rue de Paix"
+        profile.zipCode = "56987"
+
+        return profile
+    }()
+}

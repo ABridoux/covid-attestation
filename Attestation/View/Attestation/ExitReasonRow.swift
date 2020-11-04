@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExitReasonPickerView: View {
+struct ExitReasonRow: View {
 
     @Binding var selectedReason: String?
 
@@ -25,6 +25,6 @@ struct ExitReasonPickerView: View {
 
 struct ExitReasonPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        ExitReasonPickerView(selectedReason: .constant("Dodo"))
+        ExitReasonRow(selectedReason: .constant("Dodo"))
     }
 }

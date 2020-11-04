@@ -7,45 +7,59 @@
 
 import SwiftUI
 
-final class Attestation: ObservableObject {
-    @Published var date = Date()
-}
-
 struct AttestationView: View {
 
-    @State private var presentProfileEdit = false
-    @ObservedObject var attestation = Attestation()
-    @Environment(\.managedObjectContext) var context
-    @ObservedObject var profile = Profile.fetch()
+    @EnvironmentObject var profile: Profile
+    @EnvironmentObject var attestation: Attestation
+    @State private var date = Date()
+    @AppStorage("exitReason") private var exitReason: String?
     
     var body: some View {
-        Form {
-            Section() {
-                Button(action: {
-                    presentProfileEdit.toggle()
-                }, label: {
+        NavigationView {
+            Form {
+                Section() {
                     ProfilePicker()
-                        .environmentObject(profile)
-                })
-                .foregroundColor(.label)
-                .sheet(isPresented: $presentProfileEdit, content: {
-                    NavigationView {
-                        ProfileFormView(isPresented: $presentProfileEdit)
-                            .environmentObject(profile)
+                    DatePicker("Sortie", selection: $date)
+                    NavigationLink(
+                        destination: ExitReasonsList(selectedReason: $exitReason),
+                        label: {
+                            ExitReasonPickerView(selectedReason: $exitReason)
+                        })
+                }
+                
+                if attestation.wasGenerated, attestation.exitReason != nil {
+                    Section(
+                        header:
+                            HStack {
+                                Image(systemName: "clock")
+                                Text("Dernière attestation")
+                            })
+                    {
+                    NavigationLink(
+                        destination: QRCodeView(),
+                        label: {
+                            HStack {
+                                Text("\(DateFormatter.french.string(from: attestation.date)) | Motif: \(attestation.exitReason!)")
+                            }
+                        })
                     }
-                })
-                DatePicker("Sortie", selection: $attestation.date)
-            }
-            Section {
-                HStack {
-                    Spacer()
-                    Button("Générer l'attestation") {
+                }
 
+                Section {
+                    HStack {
+                        Spacer()
+                        Button("Générer l'attestation") {
+                            attestation.date = date
+                            attestation.exitReason = exitReason
+                            try? attestation.save()
+                        }
+                        .font(.title3)
+                        .disabled(!profile.isValid || exitReason == nil)
+                        Spacer()
                     }
-                    .font(.title3)
-                    Spacer()
                 }
             }
+            .navigationBarTitle("Attestation")
         }
     }
 }
@@ -53,7 +67,11 @@ struct AttestationView: View {
 struct AttestationView_Previews: PreviewProvider {
     static var previews: some View {
         AttestationView()
+            .environmentObject(Profile(firstName: "Toto", lastName: "Daffy"))
+            .environmentObject(Attestation(reason: "Dodo"))
         AttestationView()
             .preferredColorScheme(.dark)
+            .environmentObject(Attestation(reason: "Travail", wasGenerated: false))
+            .environmentObject(Profile(firstName: "Toto", lastName: "Daffy"))
     }
 }

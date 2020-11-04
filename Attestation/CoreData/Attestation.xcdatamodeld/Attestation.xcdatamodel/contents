@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AttestationEntity" representedClassName="AttestationEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="exitDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="exitReason" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="ProfileEntity" representedClassName="ProfileEntity" syncable="YES" codeGenerationType="class">
         <attribute name="birthCity" attributeType="String"/>
         <attribute name="birthDate" attributeType="Date" usesScalarValueType="NO"/>
@@ -11,5 +15,6 @@
     </entity>
     <elements>
         <element name="ProfileEntity" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="AttestationEntity" positionX="-63" positionY="36" width="128" height="73"/>
     </elements>
 </model>

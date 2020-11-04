@@ -16,7 +16,6 @@ final class Profile: ObservableObject {
 
     // MARK: - Properties
 
-    @Context static var context
     var entity: ProfileEntity?
 
     @Published var firstName = ""
@@ -27,6 +26,15 @@ final class Profile: ObservableObject {
     @Published var city = ""
     @Published var zipCode = ""
 
+    var isValid: Bool {
+        do {
+            try validate()
+            return true
+        } catch {
+            return false
+        }
+    }
+
     var fullName: String {
         if firstName.isEmpty {
             return "Ajouter un profil"
@@ -35,10 +43,18 @@ final class Profile: ObservableObject {
         return firstName + " " + lastName
     }
 
+    var qrText: String {
+        """
+        firstName: \(firstName)
+        lastName: \(lastName)
+        """
+    }
+
     // MARK: - Initialisation
 
     init() {}
 
+    /// Previews init
     init(firstName: String, lastName: String) {
         self.firstName = firstName
         self.lastName = lastName
@@ -55,7 +71,7 @@ final class Profile: ObservableObject {
         zipCode = entity.zipCode == 0 ? "" : entity.zipCode.description
     }
 
-    static func fetch(in context: NSManagedObjectContext = context) -> Profile {
+    static func fetch(in context: NSManagedObjectContext) -> Profile {
         let request: NSFetchRequest<ProfileEntity> = ProfileEntity.fetchRequest()
 
         var foundEntity: ProfileEntity?
@@ -74,7 +90,7 @@ final class Profile: ObservableObject {
         }
     }
 
-    // MARK: - Functions (CoreDataCandy 🤍)
+    // MARK: - Functions (CoreDataCandy 👀)
 
     func validate() throws {
         if firstName.isEmpty {

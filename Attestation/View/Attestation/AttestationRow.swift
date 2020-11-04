@@ -15,8 +15,6 @@ struct AttestationRow: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 5) {
-                Spacer()
-                    .frame(width: 0, height: 2)
                 HStack {
                     Image(systemName: "clock")
                         .frame(width: 20, height: 0)

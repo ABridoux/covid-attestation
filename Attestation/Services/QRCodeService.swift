@@ -14,6 +14,7 @@ enum QRCodeService {
     static let filter = CIFilter.qrCodeGenerator()
 
     static func generate(from string: String) -> UIImage {
+        // https://www.hackingwithswift.com/books/ios-swiftui/generating-and-scaling-up-a-qr-code
         let data = Data(string.utf8)
 
         filter.setValue(data, forKey: "inputMessage")

@@ -32,7 +32,7 @@ final class Attestation: ObservableObject {
 
     // MARK: - Initialisation
 
-    private init(entity: AttestationEntity, wasGenerated: Bool = true) {
+    private init(entity: Entity, wasGenerated: Bool = true) {
         self.entity = entity
         if let date = entity.exitDate {
             self.date = date
@@ -66,7 +66,7 @@ final class Attestation: ObservableObject {
     }
 
     // MARK: - Functions
-    
+
     func save() throws {
 
         entity?.exitDate = date

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,8 +14,6 @@
 		BD3A5D1D2550780A000F5106 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A5D172550780A000F5106 /* Profile.swift */; };
 		BD3A5D1E2550780A000F5106 /* ProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A5D182550780A000F5106 /* ProfileFormView.swift */; };
 		BD3A5D2425507823000F5106 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A5D2325507823000F5106 /* ProfileTests.swift */; };
-		BD3A5D2D25507851000F5106 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BD3A5D2C25507851000F5106 /* CombineCocoa */; };
-		BD3A5D33255078A1000F5106 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD3A5D32255078A1000F5106 /* SnapKit */; };
 		BD42B2CD2552D5EA005891E3 /* AttestationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42B2CC2552D5EA005891E3 /* AttestationRow.swift */; };
 		BD42B2DE25532B8D005891E3 /* ProfileNameSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42B2DD25532B8D005891E3 /* ProfileNameSection.swift */; };
 		BD42B2E425532BAF005891E3 /* ProfileBirthSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42B2E325532BAF005891E3 /* ProfileBirthSection.swift */; };
@@ -93,8 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD3A5D2D25507851000F5106 /* CombineCocoa in Frameworks */,
-				BD3A5D33255078A1000F5106 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,8 +265,6 @@
 			);
 			name = Attestation;
 			packageProductDependencies = (
-				BD3A5D2C25507851000F5106 /* CombineCocoa */,
-				BD3A5D32255078A1000F5106 /* SnapKit */,
 			);
 			productName = Attestation;
 			productReference = BD8EBC1E254F3488000D8625 /* Attestation.app */;
@@ -322,8 +316,6 @@
 			);
 			mainGroup = BD8EBC15254F3488000D8625;
 			packageReferences = (
-				BD3A5D2B25507851000F5106 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
-				BD3A5D31255078A1000F5106 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = BD8EBC1F254F3488000D8625 /* Products */;
 			projectDirPath = "";
@@ -652,38 +644,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BD3A5D2B25507851000F5106 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.1;
-			};
-		};
-		BD3A5D31255078A1000F5106 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BD3A5D2C25507851000F5106 /* CombineCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD3A5D2B25507851000F5106 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
-			productName = CombineCocoa;
-		};
-		BD3A5D32255078A1000F5106 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD3A5D31255078A1000F5106 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BD8EBC27254F3488000D8625 /* Attestation.xcdatamodeld */ = {

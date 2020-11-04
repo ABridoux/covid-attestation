@@ -33,7 +33,7 @@ struct QRCodeView: View {
 struct QRCodeView_Previews: PreviewProvider {
     static var previews: some View {
         QRCodeView()
-            .environmentObject(Profile(firstName: "Alexis", lastName: "Bridoux"))
+            .environmentObject(Profile.stub1)
             .environmentObject(Attestation(reason: "Travail"))
     }
 }

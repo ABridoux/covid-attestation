@@ -15,6 +15,7 @@ struct ExitReason: Codable, Hashable {
 
 extension Array where Element == ExitReason {
 
+    /// Load the exit reasons from the provided JSON
     static func load(from url: URL = .exitReasons) -> Self {
         do {
             let data = try Data(contentsOf: url)

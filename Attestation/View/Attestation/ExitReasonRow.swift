@@ -1,9 +1,7 @@
 //
-//  ExitReasonPickerView.swift
-//  Attestation
-//
-//  Created by Alexis Bridoux on 03/11/2020.
-//
+// covid-attestation
+// Copyright (c) Alexis Bridoux & contributors 2020
+// GPL license, see LICENSE file for details
 
 import SwiftUI
 

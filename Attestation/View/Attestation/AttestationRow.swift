@@ -16,7 +16,7 @@ struct AttestationRow: View {
                 HStack {
                     Image(systemName: "clock")
                         .frame(width: 20, height: 0)
-                    Text(DateFormatter.french.string(from: attestation.date))
+                    Text("\(DateFormatter.frenchDay.string(from: attestation.date)) à \(DateFormatter.frenchHour.string(from: attestation.date))")
                 }
 
                 HStack {

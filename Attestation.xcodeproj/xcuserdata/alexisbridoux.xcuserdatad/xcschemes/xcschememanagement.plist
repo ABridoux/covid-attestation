@@ -30,6 +30,29 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>WidgetsExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>BD8EBC1D254F3488000D8625</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD8EBC36254F3489000D8625</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDCA5E222555D8CA00CA3D02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

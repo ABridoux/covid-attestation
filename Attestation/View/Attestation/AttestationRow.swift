@@ -7,12 +7,14 @@ import SwiftUI
 
 struct AttestationRow: View {
 
-    @EnvironmentObject var attestation: Attestation
+    @EnvironmentObject var attestation: GeneratedAttestation
     @State private var pushAttestation = false
 
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 5) {
+                Spacer()
+                    .frame(width: 0, height: 2)
                 HStack {
                     Image(systemName: "clock")
                         .frame(width: 20, height: 0)
@@ -49,7 +51,7 @@ struct AttestationRow: View {
 struct AttestationRow_Previews: PreviewProvider {
     static var previews: some View {
         AttestationRow()
-            .environmentObject(Attestation(reason: "Dodo"))
+            .environmentObject(GeneratedAttestation(reason: "Dodo"))
             .padding()
     }
 }

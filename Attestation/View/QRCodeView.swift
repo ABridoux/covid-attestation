@@ -8,7 +8,7 @@ import SwiftUI
 struct QRCodeView: View {
 
     @EnvironmentObject var profile: Profile
-    @EnvironmentObject var attestation: Attestation
+    @EnvironmentObject var attestation: GeneratedAttestation
 
     var body: some View {
         VStack {
@@ -32,6 +32,6 @@ struct QRCodeView_Previews: PreviewProvider {
     static var previews: some View {
         QRCodeView()
             .environmentObject(Profile.stub1)
-            .environmentObject(Attestation(reason: "Travail"))
+            .environmentObject(GeneratedAttestation(reason: "Travail"))
     }
 }

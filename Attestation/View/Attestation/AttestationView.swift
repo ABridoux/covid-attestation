@@ -8,7 +8,7 @@ import SwiftUI
 struct AttestationView: View {
 
     @EnvironmentObject var profile: Profile
-    @EnvironmentObject var attestation: Attestation
+    @EnvironmentObject var attestation: GeneratedAttestation
     @EnvironmentObject var currentDate: CurrentDate
     @AppStorage("exitReason") private var exitReason: String?
 
@@ -54,12 +54,12 @@ struct AttestationView_Previews: PreviewProvider {
     static var previews: some View {
         AttestationView()
             .environmentObject(Profile.stub1)
-            .environmentObject(Attestation(reason: "Dodo"))
+            .environmentObject(GeneratedAttestation(reason: "Dodo"))
             .environmentObject(CurrentDate())
         AttestationView()
             .preferredColorScheme(.dark)
             .environmentObject(Profile.stub1)
-            .environmentObject(Attestation(reason: "Travail", wasGenerated: false))
+            .environmentObject(GeneratedAttestation(reason: "Travail", wasGenerated: false))
             .environmentObject(CurrentDate())
     }
 }

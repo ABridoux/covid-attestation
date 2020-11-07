@@ -25,6 +25,7 @@ struct ProfileRow: View {
             NavigationView {
                 ProfileFormView(isPresented: $presentProfileEdit)
                     .environmentObject(profile)
+                    .accentColor(.tint)
             }
         })
     }

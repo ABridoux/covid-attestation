@@ -23,6 +23,7 @@ struct ProfileFormView: View {
             leading: Button("Annuler", action: {
                 isPresented.toggle()
             })
+            .foregroundColor(.tint)
             .font(.callout),
             trailing: Button("OK", action: {
                 do {
@@ -34,6 +35,7 @@ struct ProfileFormView: View {
                 }
                 isPresented.toggle()
             })
+            .foregroundColor(.tint)
             .alert(isPresented: $showAlert, content: {
                 Alert(title: Text("Erreur dans le formulaire"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             })
@@ -46,6 +48,7 @@ struct ProfileFormView_Previews: PreviewProvider {
         NavigationView {
             ProfileFormView(isPresented: .constant(true))
                 .environmentObject(Profile(firstName: "Tom", lastName: "Jedusor"))
+                .accentColor(.tint)
         }
     }
 }

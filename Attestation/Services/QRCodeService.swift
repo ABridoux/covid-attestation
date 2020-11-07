@@ -27,12 +27,12 @@ enum QRCodeService {
         return UIImage(cgImage: cgimg)
     }
 
-    static func generate(from profile: Profile, attestation: Attestation) -> UIImage {
+    static func generate(from profile: Profile, attestation: GeneratedAttestation) -> UIImage {
         let string = qrString(from: profile, attestation: attestation)
         return generate(from: string)
     }
 
-    static func qrString(from profile: Profile, attestation: Attestation) -> String {
+    static func qrString(from profile: Profile, attestation: GeneratedAttestation) -> String {
         """
         Cree le: \(attestation.qrDateString);
         Nom: \(profile.lastName);
@@ -44,7 +44,7 @@ enum QRCodeService {
         """
     }
 
-    static func qrLabel(from profile: Profile, attestation: Attestation) -> String {
+    static func qrLabel(from profile: Profile, attestation: GeneratedAttestation) -> String {
         """
         Créé le: \(attestation.qrDateString)
         Nom: \(profile.lastName)

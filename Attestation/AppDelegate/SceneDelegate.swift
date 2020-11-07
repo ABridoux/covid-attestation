@@ -25,7 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 .environment(\.managedObjectContext, context)
                 .environmentObject(currentDate)
                 .environmentObject(Profile.fetch(in: context))
-                .environmentObject(Attestation.fetch(in: context))
+                .environmentObject(GeneratedAttestation.fetch(in: context))
+                .accentColor(.tint)
 
             window.rootViewController = UIHostingController(rootView: view)
             self.window = window

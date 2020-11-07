@@ -6,7 +6,7 @@
 import SwiftUI
 import CoreData
 
-final class Attestation: ObservableObject {
+final class GeneratedAttestation: ObservableObject {
 
     // MARK: - Constants
 
@@ -44,7 +44,7 @@ final class Attestation: ObservableObject {
         self.wasGenerated = wasGenerated
     }
 
-    static func fetch(in context: NSManagedObjectContext) -> Attestation {
+    static func fetch(in context: NSManagedObjectContext) -> GeneratedAttestation {
         let request: NSFetchRequest<Entity> = Entity.fetchRequest()
 
         var foundEntity: Entity?
@@ -56,10 +56,10 @@ final class Attestation: ObservableObject {
         }
 
         if let entity = foundEntity {
-            return Attestation(entity: entity)
+            return GeneratedAttestation(entity: entity)
         } else {
             let entity = Entity(context: context)
-            return Attestation(entity: entity, wasGenerated: false)
+            return GeneratedAttestation(entity: entity, wasGenerated: false)
         }
     }
 

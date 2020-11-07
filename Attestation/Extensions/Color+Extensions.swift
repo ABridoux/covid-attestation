@@ -6,6 +6,7 @@
 import SwiftUI
 
 public extension Color {
+    static let tint = Color(red: 0.34, green: 0.44, blue: 0.75)
     static let lightText = Color(UIColor.lightText)
     static let darkText = Color(UIColor.darkText)
 

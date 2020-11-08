@@ -9,11 +9,45 @@ extension Locale {
     static let france = Self(identifier: "fr_FR")
 }
 
+final class FrenchDateFormater: DateFormatter {
+
+    override init() {
+        super.init()
+
+        dateFormat = "EEEE dd MMMM"
+        locale = .france
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func string(from date: Date) -> String {
+        let calendar = Calendar.current
+        let result = calendar.compare(date, to: .now, toGranularity: .day)
+        switch result {
+        case .orderedSame:
+            return "Aujourd'hui"
+
+        case .orderedAscending:
+            if calendar.dateComponents([.day], from: calendar.startOfDay(for: date), to: calendar.startOfDay(for: .now)).day == 1 {
+                return "Hier"
+            } else {
+                fallthrough
+            }
+
+        default: return super.string(from: date).capitalized
+        }
+    }
+}
+
 extension DateFormatter {
 
-    static let french: DateFormatter = {
+    static let frenchDay: DateFormatter = { FrenchDateFormater() }()
+
+    static let frenchHour: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE dd MMMM - HH:mm"
+        formatter.dateFormat = "HH:mm"
         formatter.locale = .france
         return formatter
     }()
